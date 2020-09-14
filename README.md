@@ -9,3 +9,11 @@ This assignment relies on the Coverage programs.
 
 ## Program 4
 This assignment relies on the Circles programs. 
+
+## User ID
+This repo's user id is jvivar115.
+
+## Lab 1
+This assignment relies on setting up git for the upcoming semester.
+
+
