@@ -76,6 +76,8 @@ public class WebWorker implements Runnable
 	{
 		String line;
 		BufferedReader r = new BufferedReader(new InputStreamReader(is));
+		String s=is.readLine();
+		System.out.println("Logged request: " + s);
 		while (true)
 		{
 			try
@@ -135,6 +137,16 @@ public class WebWorker implements Runnable
 		os.write("<html><head></head><body>\n".getBytes());
 		os.write("<h3>My web server works!</h3>\n".getBytes());
 		os.write("</body></html>\n".getBytes());
+	}
+	
+	/**
+	* a method to retreive the specific directory/file
+	* that the user requests in the URL
+	*
+	**/
+	private void getContent(InputStream is) throws Exception
+	{
+		
 	}
 
 } // end class
