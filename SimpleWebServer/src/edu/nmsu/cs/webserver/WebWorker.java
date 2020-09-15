@@ -76,8 +76,8 @@ public class WebWorker implements Runnable
 	{
 		String line;
 		BufferedReader r = new BufferedReader(new InputStreamReader(is));
-		String s=r.readLine();
-		System.out.println("Logged request: " + s);
+		//String s=r.readLine();
+		//System.out.println("Logged request: " + s);
 		while (true)
 		{
 			try
