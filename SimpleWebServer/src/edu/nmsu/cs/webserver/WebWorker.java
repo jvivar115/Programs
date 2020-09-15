@@ -134,19 +134,17 @@ public class WebWorker implements Runnable
 	 **/
 	private void writeContent(OutputStream os) throws Exception
 	{
+		try{
+		is.readLine()
 		os.write("<html><head></head><body>\n".getBytes());
 		os.write("<h3>My web server works!</h3>\n".getBytes());
 		os.write("</body></html>\n".getBytes());
+		}
+		catch (Exception e)
+		{
+			System.err.println("Request error: " + e);
+		}
 	}
 	
-	/**
-	* a method to retreive the specific directory/file
-	* that the user requests in the URL
-	*
-	**/
-	private void getContent(InputStream is) throws Exception
-	{
-		
-	}
 
 } // end class
