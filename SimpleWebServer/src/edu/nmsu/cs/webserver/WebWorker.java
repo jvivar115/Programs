@@ -23,6 +23,7 @@ package edu.nmsu.cs.webserver;
 
 import java.io.*;
 import java.util.*;
+import java.time.*;
 import java.net.Socket;
 import java.text.DateFormat;
 
@@ -31,6 +32,7 @@ public class WebWorker implements Runnable
 {
 	String path = "";
 	int pathcheck = 0;
+	String serverName = "Julian V's Server";
 	private Socket socket;
 
 	/**
@@ -152,6 +154,11 @@ public class WebWorker implements Runnable
 				BufferedReader br = new BufferedReader(fr);
 				
 				while((line=br.readLine())!=null) {
+					if(line.contains("<cs371date>") || line.contains("<cs371server>")) {
+						System.out.println(line);
+						line=line.replaceAll("<cs371date>", LocalDate.now().toString());
+						line=line.replaceAll("<cs371server>", serverName);
+					}
 					os.write(line.getBytes());
 				}
 				fr.close();
