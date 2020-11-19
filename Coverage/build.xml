@@ -74,6 +74,25 @@
 				<arg value="6" />
 			</java>
 		</jacoco:coverage>
+		<echo message="TEST RacingScore1: 7 8 9" />
+		<jacoco:coverage destfile="${result.exec.file}">
+			<java classname="edu.nmsu.cs.scoring.RacingScore1" fork="true">
+				<classpath path="${build.dir}" />
+				<arg value="7" />
+				<arg value="8" />
+				<arg value="9" />
+			</java>
+		</jacoco:coverage>
+		<echo message="TEST RacingScore1: 3 32 9 4" />
+		<jacoco:coverage destfile="${result.exec.file}">
+			<java classname="edu.nmsu.cs.scoring.RacingScore1" fork="true">
+				<classpath path="${build.dir}" />
+				<arg value="3" />
+				<arg value="32" />
+				<arg value="9" />
+				<arg value="4" />
+			</java>
+		</jacoco:coverage>
 	</target>
 
 	<target name="report" depends="test,checkReport" unless="report.notneeded">
