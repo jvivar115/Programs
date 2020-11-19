@@ -64,10 +64,10 @@ public class RacingScore2
 	public static void main(String args[])
 	{
 		int s1, s2, s3;
-<span class="pc bpc" id="L67" title="2 of 4 branches missed.">		if (args == null || args.length != 3)</span>
+<span class="pc bpc" id="L67" title="1 of 4 branches missed.">		if (args == null || args.length != 3)</span>
 		{
-<span class="nc" id="L69">			System.err.println(&quot;Error: must supply three arguments!&quot;);</span>
-<span class="nc" id="L70">			return;</span>
+<span class="fc" id="L69">			System.err.println(&quot;Error: must supply three arguments!&quot;);</span>
+<span class="fc" id="L70">			return;</span>
 		}
 		try
 		{
@@ -75,10 +75,10 @@ public class RacingScore2
 <span class="fc" id="L75">			s2 = Integer.parseInt(args[1]);</span>
 <span class="fc" id="L76">			s3 = Integer.parseInt(args[2]);</span>
 		}
-<span class="nc" id="L78">		catch (Exception e)</span>
+<span class="fc" id="L78">		catch (Exception e)</span>
 		{
-<span class="nc" id="L80">			System.err.println(&quot;Error: arguments must be integers!&quot;);</span>
-<span class="nc" id="L81">			return;</span>
+<span class="fc" id="L80">			System.err.println(&quot;Error: arguments must be integers!&quot;);</span>
+<span class="fc" id="L81">			return;</span>
 <span class="fc" id="L82">		}</span>
 <span class="pc bpc" id="L83" title="6 of 12 branches missed.">		if (s1 &lt; 0 || s1 &gt; 50 || s2 &lt; 0 || s2 &gt; 50 || s3 &lt; 0 || s3 &gt; 50)</span>
 		{
