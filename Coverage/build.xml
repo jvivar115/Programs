@@ -150,6 +150,43 @@
 				<arg value="5" />
 			</java>
 		</jacoco:coverage>
+		
+		<echo message="TEST RacingScore2: 51 22 1" />
+		<jacoco:coverage destfile="${result.exec.file}">
+			<java classname="edu.nmsu.cs.scoring.RacingScore2" fork="true">
+				<classpath path="${build.dir}" />
+				<arg value="51" />
+				<arg value="22" />
+				<arg value="1" />
+			</java>
+		</jacoco:coverage>
+		
+		<echo message="TEST RacingScore2: 13 5 15" />
+		<jacoco:coverage destfile="${result.exec.file}">
+			<java classname="edu.nmsu.cs.scoring.RacingScore2" fork="true">
+				<classpath path="${build.dir}" />
+				<arg value="13" />
+				<arg value="5" />
+				<arg value="15" />
+			</java>
+		</jacoco:coverage>
+		
+		<echo message="TEST RacingScore2: 3 4 2" />
+		<jacoco:coverage destfile="${result.exec.file}">
+			<java classname="edu.nmsu.cs.scoring.RacingScore2" fork="true">
+				<classpath path="${build.dir}" />
+				<arg value="3" />
+				<arg value="4" />
+				<arg value="2" />
+			</java>
+		</jacoco:coverage>
+		
+		<echo message="TEST RacingScore2: NULL" />
+		<jacoco:coverage destfile="${result.exec.file}">
+			<java classname="edu.nmsu.cs.scoring.RacingScore2" fork="true">
+				<classpath path="${build.dir}" />
+			</java>
+		</jacoco:coverage>
 	</target>
 	<!-- End Testing -->
 	
